@@ -9,7 +9,7 @@
   --first-color: hsl(353, 100%, 65%);
   --title-color: hsl(244, 24%, 26%);
   --text-color: hsl(244, 16%, 43%);
-  --body-color: hsl(258, 60%, 98%);
+  --body-color: linear-gradient(-225deg, #2CD8D5 0%, #C5C1FF 56%, #FFBAC3 100%);
   --container-color: #fff;
 
   /*------------------Font & Typography-----------------*/
@@ -67,7 +67,8 @@ textarea {
 }
 
 body {
-  background-color: var(--body-color);
+  background-image: var(--body-color);
+  z-index: -999;
   line-height: 1.7;
   color: var(--text-color);
 }
