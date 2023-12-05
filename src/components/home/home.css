@@ -1,0 +1,445 @@
+.home {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@keyframes glimmer {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(0.99);
+  }
+  50% {
+    opacity: 9;
+    transform: scale(1);
+  }
+}
+
+.stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+
+  z-index: -1;
+}
+
+.stars-container,
+.shooting-stars-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: glimmer 5s infinite alternate;
+
+
+
+}
+
+.star {
+  width: 100%;
+  height: auto;
+}
+
+.shootingStars {
+  width: 100%;
+  height: auto;
+}
+
+
+.intro {
+  max-width: 540px;
+  text-align: center;
+}
+
+.home__img {
+  margin-bottom: 1.5rem;
+  width: 120px;
+  height: 120px;
+  border-radius: 100px;
+}
+.home__name {
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-bold);
+  margin-bottom: 0.5rem;
+}
+
+.home__header-contacts {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.home__header-link {
+  font-size: 1.6rem;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.linkedin {
+  color: #2196F3;
+}
+.phone {
+  color: rgb(0, 0, 0);
+}
+.home__header-link:hover {
+  color: hsl(43, 100%, 68%);
+}
+.fa-phone {
+  cursor: pointer;
+}
+
+.scroll__down {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 0;
+  width: 100%;
+}
+
+.home__scroll-name {
+  color: #000;
+  font-size: var(--small-font-size);
+}
+
+.scroll__down .mouse {
+
+  border: 2px solid #454345;
+  display: block;
+  height: 1.6rem;
+  width: 1.25rem;
+  margin: auto;
+  margin-top: 0.75rem;
+  border-radius: 1rem;
+  position: relative;
+}
+
+
+@keyframes ani-mouse {
+  0% {
+    top: 49%;
+  }
+  15% {
+    top: 50%;
+  }
+  50% {
+    top: 50%;
+  }
+  100% {
+    top: 29%;
+  }
+}
+
+.wheel {
+  background-color: var(--title-color);
+  border-radius: 100%;
+  width: 0.25rem;
+  height: 0.25rem;
+  position: absolute;
+  top: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: ani-mouse 2s linear infinite;
+}
+
+@keyframes sway {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .clouds {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    animation: sway 4s infinite alternate; 
+    overflow: hidden;
+  }
+
+  .cloud1,
+  .cloud2,
+  .cloud3,
+  .cloud4,
+  .cloud5,
+  .cloud6 {
+    position: relative;
+    
+  }
+  .cloud5, .cloud6 {
+    display: none;
+  }
+  .cloud1 {
+    width: 130px;
+    height: 130px;
+    left: 10%;
+    top: 1%;
+    z-index: 1; /* Adjust the stacking order */
+  }
+
+  .cloud2 {
+    width: 120px;
+    height: 130px;
+    left: 8%;
+    top: 10%;
+    z-index: 2; /* Adjust the stacking order */
+  }
+
+  .cloud3 {
+    width: 130px;
+    height: 150px;
+    left: 0%;
+    top: 0%;
+    z-index: 3; /* Adjust the stacking order */
+  }
+  .cloud4 {
+    width: 140px;
+    height: 170px;
+    left: 0%;
+    top: 22%;
+    z-index: 3; /* Adjust the stacking order */
+  }
+
+@media (min-width: 762px) {
+  @keyframes sway {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .clouds {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    animation: sway 4s infinite alternate; 
+    overflow: hidden;
+  }
+
+
+  .cloud1 {
+    width: 250px;
+    height: 250px;
+    left: 1%;
+    top: 10%;
+    z-index: 1; /* Adjust the stacking order */
+  }
+
+  .cloud2 {
+    width: 150px;
+    height: 120px;
+    left: 2%;
+    top: 1%;
+    z-index: 2; /* Adjust the stacking order */
+  }
+
+  .cloud3 {
+    width: 220px;
+    height: 200px;
+    left: 10%;
+    top: 1%;
+    z-index: 3; /* Adjust the stacking order */
+  }
+
+  .cloud4 {
+    width: 240px;
+    height: 250px;
+    left: 10%;
+    top: 5%;
+    z-index: 4; /* Adjust the stacking order */
+  }
+
+  .cloud5 {
+    width: 250px;
+    height: 250px;
+    left: 15%;
+    top: -10%;
+    z-index: 5; /* Adjust the stacking order */
+  }
+
+  .cloud6 {
+    width: 150px;
+    height: 150px;
+    left: 10%;
+    left: 2%;
+    top: 10%;
+    z-index: 6; /* Adjust the stacking order */
+  }
+
+  @media (min-width: 1028px) {
+    .cloud1 {
+      width: 250px;
+      height: 250px;
+      left: 1%;
+      top: 1%;
+      z-index: 1; /* Adjust the stacking order */
+    }
+
+    .cloud2 {
+      width: 150px;
+      height: 120px;
+      left: 1%;
+      top: 1%;
+      z-index: 2; /* Adjust the stacking order */
+    }
+
+    .cloud3 {
+      width: 220px;
+      height: 200px;
+      left: 10%;
+      top: 10%;
+      z-index: 3; /* Adjust the stacking order */
+    }
+
+    .cloud4 {
+      width: 240px;
+      height: 250px;
+      left: 0%;
+      top: 5%;
+      z-index: 4; /* Adjust the stacking order */
+    }
+
+    .cloud5 {
+      width: 250px;
+      height: 250px;
+      left: 15%;
+      top: 1%;
+      z-index: 5; /* Adjust the stacking order */
+    }
+
+    .cloud6 {
+      width: 150px;
+      height: 150px;
+      left: 10%;
+      left: 2%;
+      top: 10%;
+      z-index: 6; /* Adjust the stacking order */
+    }
+  }
+}
+
+/*********Toggle Switch *********/
+.toggle-switch {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  width: 60px;
+  height: 34px;
+  z-index: 100;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+ 
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.round {
+  border-radius: 34px;
+}
+
+.fa-sun {
+  color: #ecb622;
+}
+
+.icon {
+  font-size: 20px;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  transition: 0.6s;
+}
+
+/*********Dark Mode********/
+
+.dark-mode-body {
+  color: #fff;
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+}
+.dark-mode .home__name {
+  color: #fff;
+}
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
+  }
+  50% {
+    box-shadow: 0 0 20px #fff, 0 0 40px #fff, 0 0 60px #fff;
+  }
+  100% {
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
+  }
+}
+.dark-mode .btn {
+  animation: glow 2s infinite;
+  border: none;
+}
+
+.dark-mode .scroll__down .mouse{
+  border: 2px solid #fff;
+}
+.dark-mode .scroll__down .wheel {
+  background-color: #fff;
+
+}
+.dark-mode .scroll__down .home__scroll-name {
+  color: #fff;
+}
+
