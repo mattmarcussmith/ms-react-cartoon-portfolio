@@ -1,13 +1,13 @@
 import React from "react";
 import "./about.css";
-import Myself from "../../assets/avatar-2.gif";
+import Myself from "../../assets/avatar-4.gif";
 import CV from "../../assets/matthewsmithresume.pdf";
 import AboutBox from "./AboutBox"
 
 const About = ({isDarkMode}) => {
   return (
     <section className={`about container section ${isDarkMode? "dark-mode" : ""}`} id="about">
-      <h2 className="section__title">Self Reflection</h2>
+      <h2 className="section__title">Self reflection</h2>
       <div className="about__container grid">
       <img className="about__image" src={Myself} alt="Myself" />
 

@@ -30,18 +30,18 @@
 }
 @keyframes glow-icon {
     0% {
-      box-shadow: 0 0 15px #fdfdfd; 
+      box-shadow: 0 0 25px #ffffff; 
     }
     50% {
-      box-shadow: 0 0 20px rgb(254, 183, 16); 
+      box-shadow: 0 0 30px rgb(16, 24, 254); 
     }
     100% {
-      box-shadow: 0 0 15px #292a2a; 
+      box-shadow: 0  0 30px rgb(5, 13, 249);
     }
   }
 
 .nav__link:hover {
-    animation: glow-icon 1s infinite; 
+    animation: glow-icon 2s infinite; 
 
   }
 
