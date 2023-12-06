@@ -31,7 +31,7 @@ const App = () => {
         <Sidebar isDarkMode={isDarkMode} />
         <Home isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}/>
         <About isDarkMode={isDarkMode}/>
-        <Services />
+        <Services isDarkMode={isDarkMode} />
         <Resume />
         <Portfolio />
         <Contact />

@@ -104,6 +104,7 @@
     text-align: center;
     padding-bottom: 1.25rem;
     
+    
 }
 .icon-fire {
     font-size: var(--h1-font-size);
@@ -134,7 +135,7 @@
        text-align: center;
         margin-top: 4.25rem;
     }
-    .about__box {
+    .about__box i {
         display: flex;
         justify-content: center;
         text-align: center;
@@ -150,16 +151,27 @@
  /*********Dark Mode********/
  @keyframes glow {
     0% {
-      box-shadow: 0 0 5px #585a5c; /* Set the initial box-shadow with a small blur */
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+       
+    }
+    25% {
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+        opacity: 0.5;
     }
     50% {
-      box-shadow: 0 0 20px #36434d; /* Set the intermediate box-shadow with a larger blur */
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+        opacity: 0.7;
+    }
+    75% {
+        box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+        opacity: 0.9;
     }
     100% {
-      box-shadow: 0 0 5px #464444; /* Set the final box-shadow with a small blur (same as initial) */
+        box-shadow: 0 0 30px rgba(255, 255, 255, 0.9);
+        opacity: 1;
     }
-  }
+}
  .about.dark-mode .about__container .about__data{
-    animation: glow 1s infinite; /* Adjust the duration as needed */
+    animation: glow 8s infinite; /* Adjust the duration as needed */
     box-shadow: none; /* Remove the box-shadow on hover to avoid outline */
  }

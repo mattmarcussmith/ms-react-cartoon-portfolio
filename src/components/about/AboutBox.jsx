@@ -19,7 +19,7 @@ const AboutBox = () => {
         <div className="about__box">
             <i className="about__icon icon-fire"></i>
             <div>
-            <AnimatedNumber value={102} config={{ duration: 30000, tension: 40, friction: 30}} />
+            <AnimatedNumber value={102} config={{ duration: 60000, tension: 40, friction: 30}} />
                 <span className="about__subtitle">Projects completed</span>
             </div>
         </div>
@@ -27,7 +27,7 @@ const AboutBox = () => {
         <div className="about__box">
             <i className="about__icon icon-cup"></i>
             <div>
-            <AnimatedNumber value={6700} config={{ duration: 20000, tension: 80, friction: 15 }} />
+            <AnimatedNumber value={6700} config={{ duration: 100000, tension: 10, friction: 50 }} />
                 <span className="about__subtitle">Cups of coffee</span>
             </div>
         </div>

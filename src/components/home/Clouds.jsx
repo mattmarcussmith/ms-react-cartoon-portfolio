@@ -16,6 +16,7 @@ const Clouds = () => {
         <img className="cloud cloud4"src={Cloud4} alt="cloud" />
         <img className="cloud cloud5"src={Cloud5} alt="cloud" />
         <img className="cloud cloud6"src={Cloud6} alt="cloud" />
+        
  
     </div>
   )

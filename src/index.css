@@ -9,9 +9,9 @@
   --first-color: hsl(353, 100%, 65%);
   --title-color: hsl(244, 24%, 26%);
   --text-color: hsl(244, 16%, 43%);
-  --body-color: linear-gradient(-225deg, #2CD8D5 0%, #C5C1FF 56%, #FFBAC3 100%);
+  --body-color:   linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
   --container-color: #fff;
-
+  
   /*------------------Font & Typography-----------------*/
   /*------------------1rem = 16px -----------------*/
   --body-font: "Rubik", sans-serif;
@@ -83,7 +83,9 @@ ul {
 
 a {
   text-decoration: none;
+  
 }
+
 button {
   cursor: pointer;
   border: none;
@@ -139,15 +141,6 @@ img {
   display: inline-block;
   background-color: var(--first-color);
   font-weight: var(--font-bold);
+
 }
-@keyframes button-push {
-  50% {
-    transform: scale(0.8);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-.btn:hover {
-  animation: button-push 0.3s linear 1;
-}
+

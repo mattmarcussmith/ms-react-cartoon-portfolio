@@ -1,6 +1,6 @@
 import React from "react";
 import "./home.css";
-import Me from "../../assets/avatar-1.gif";
+import Me from "../../assets/avatar-2.gif";
 import HeaderContact from "./HeaderContact";
 import ScrollDown from "./ScrollDown";
 import Stars from "./Stars"
@@ -9,7 +9,7 @@ import Stars from "./Stars"
 const DarkModeHome = () => {
  
   return (
-    <>
+   
     <section className="home container dark-mode"id="home">
       <Stars />
       <div className="intro">
@@ -17,14 +17,14 @@ const DarkModeHome = () => {
         <h1 className="home__name">Matthew Smith</h1>
         <span className="home__education">I'm a React Engineer.</span>
         <HeaderContact />
-        <a href="#contact" className="btn dark-mode">
+        <a href="#contact" className="btn">
           Hire Me
         </a>
         <ScrollDown />
       </div>
   
     </section>
-  </>
+
   );
 };
 
