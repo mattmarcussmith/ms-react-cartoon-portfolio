@@ -1,15 +1,14 @@
-
 .home {
   position: relative;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 @keyframes glimmer {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0.4;
     transform: scale(0.99);
   }
@@ -48,7 +47,6 @@
   height: auto;
 }
 
-
 .intro {
   max-width: 540px;
   text-align: center;
@@ -60,7 +58,6 @@
   width: 120px;
   height: 120px;
   border-radius: 100px;
-
 }
 .home__name {
   font-size: var(--h1-font-size);
@@ -83,7 +80,7 @@
   cursor: pointer;
 }
 .linkedin {
-  color: #2196F3;
+  color: #2196f3;
   z-index: 99;
 }
 .phone {
@@ -118,7 +115,6 @@
   position: relative;
 }
 
-
 @keyframes ani-mouse {
   0% {
     top: 49%;
@@ -147,141 +143,139 @@
 }
 
 @keyframes sway {
-    0% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
-    100% {
-      transform: translateY(0);
-    }
+  0% {
+    transform: translateY(0);
   }
-
-
-  .clouds {
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    animation: sway 4s infinite alternate; 
-    overflow: hidden;
+  50% {
+    transform: translateY(-10px);
   }
+  100% {
+    transform: translateY(0);
+  }
+}
 
-  .cloud1,
-  .cloud2,
-  .cloud3,
-  .cloud4,
+.clouds {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  animation: sway 4s infinite alternate;
+  overflow: hidden;
+}
+
+.cloud1,
+.cloud2,
+.cloud3,
+.cloud4,
+.cloud5,
+.cloud6 {
+  position: relative;
+}
+.cloud5,
+.cloud6 {
+  display: none;
+}
+.cloud1 {
+  width: 130px;
+  height: 130px;
+  left: 10%;
+  top: 1%;
+  z-index: 1; /* Adjust the stacking order */
+}
+
+.cloud2 {
+  width: 120px;
+  height: 130px;
+  left: 8%;
+  top: 10%;
+  z-index: 2; /* Adjust the stacking order */
+}
+
+.cloud3 {
+  width: 130px;
+  height: 150px;
+  left: 0%;
+  top: 0%;
+  z-index: 3; /* Adjust the stacking order */
+}
+.cloud4 {
+  width: 140px;
+  height: 170px;
+  left: 0%;
+  top: 22%;
+  z-index: 3; /* Adjust the stacking order */
+}
+.cloud5 {
+  width: 140px;
+  height: 170px;
+  left: 0%;
+  top: 22%;
+  z-index: 3; /* Adjust the stacking order */
+}
+.cloud6 {
+  width: 140px;
+  height: 170px;
+  left: 0%;
+  top: 22%;
+  z-index: 3; /* Adjust the stacking order */
+}
+
+@media (min-width: 1028px) {
   .cloud5,
   .cloud6 {
-    position: relative;
-    
-  }
-  .cloud5, .cloud6 {
-    display: none;
+    display: flex;
   }
   .cloud1 {
-    width: 130px;
-    height: 130px;
-    left: 10%;
+    width: 250px;
+    height: 250px;
+    left: 1%;
     top: 1%;
     z-index: 1; /* Adjust the stacking order */
   }
 
   .cloud2 {
-    width: 120px;
-    height: 130px;
-    left: 8%;
-    top: 10%;
+    width: 150px;
+    height: 120px;
+    left: 1%;
+    top: 1%;
     z-index: 2; /* Adjust the stacking order */
   }
 
   .cloud3 {
-    width: 130px;
-    height: 150px;
+    width: 220px;
+    height: 200px;
     left: 0%;
-    top: 0%;
+    top: 10%;
     z-index: 3; /* Adjust the stacking order */
   }
+
   .cloud4 {
-    width: 140px;
-    height: 170px;
+    width: 240px;
+    height: 250px;
     left: 0%;
-    top: 22%;
-    z-index: 3; /* Adjust the stacking order */
+    top: 5%;
+    z-index: 4; /* Adjust the stacking order */
   }
+
   .cloud5 {
-    width: 140px;
-    height: 170px;
-    left: 0%;
-    top: 22%;
-    z-index: 3; /* Adjust the stacking order */
+    width: 150px;
+    height: 150px;
+    left: 5%;
+    top: 1%;
+    z-index: 1; /* Adjust the stacking order */
   }
+
   .cloud6 {
-    width: 140px;
-    height: 170px;
-    left: 0%;
-    top: 22%;
-    z-index: 3; /* Adjust the stacking order */
+    width: 150px;
+    height: 150px;
+    left: 10%;
+    left: 80%;
+    top: 3%;
+    z-index: 6; /* Adjust the stacking order */
   }
-
-  @media (min-width: 1028px) {
-    .cloud5, .cloud6 {
-      display: flex;
-   
-    }
-    .cloud1 {
-      width: 250px;
-      height: 250px;
-      left: 1%;
-      top: 1%;
-      z-index: 1; /* Adjust the stacking order */
-    }
-
-    .cloud2 {
-      width: 150px;
-      height: 120px;
-      left: 1%;
-      top: 1%;
-      z-index: 2; /* Adjust the stacking order */
-    }
-
-    .cloud3 {
-      width: 220px;
-      height: 200px;
-      left: 0%;
-      top: 10%;
-      z-index: 3; /* Adjust the stacking order */
-    }
-
-    .cloud4 {
-      width: 240px;
-      height: 250px;
-      left: 0%;
-      top: 5%;
-      z-index: 4; /* Adjust the stacking order */
-    }
-
-    .cloud5 {
-      width: 150px;
-      height: 150px;
-      left: 5%;
-      top: 1%;
-      z-index: 1; /* Adjust the stacking order */
-    }
-
-    .cloud6 {
-      width: 150px;
-      height: 150px;
-      left: 10%;
-      left: 80%;
-      top: 3%;
-      z-index: 6; /* Adjust the stacking order */
-    }
-  }
-
+}
 
 /*********Toggle Switch *********/
 .toggle-switch {
@@ -299,7 +293,6 @@
   opacity: 0;
   width: 0;
   height: 0;
- 
 }
 
 .slider {
@@ -308,7 +301,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #2196F3;
+  background-color: #2196f3;
   transition: 0.4s;
   border-radius: 34px;
   cursor: pointer;
@@ -316,7 +309,7 @@
 
 .slider:before {
   position: absolute;
-  content: '';
+  content: "";
   height: 26px;
   width: 26px;
   left: 4px;
@@ -327,7 +320,7 @@
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #2196f3;
 }
 
 input:checked + .slider:before {
@@ -350,12 +343,9 @@ input:checked + .slider:before {
   transition: 0.6s;
 }
 
-
 .btn {
   animation: glow 1s infinite;
 }
-
-
 
 /*********Dark Mode********/
 .dark-mode-body {
@@ -366,16 +356,12 @@ input:checked + .slider:before {
   color: #fff;
 }
 
-
-
-.dark-mode .scroll__down .mouse{
+.dark-mode .scroll__down .mouse {
   border: 2px solid #fff;
 }
 .dark-mode .scroll__down .wheel {
   background-color: #fff;
-
 }
 .dark-mode .scroll__down .home__scroll-name {
   color: #fff;
 }
-

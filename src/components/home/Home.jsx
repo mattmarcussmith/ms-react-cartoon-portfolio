@@ -8,7 +8,7 @@ import ToggleBtn from "./ToggleBtn";
 import DarkModeHome from "./DarkModeHome";
 import "./home.css";
 
-const Home = ({ isDarkMode, toggleDarkMode}) => {
+const Home = ({ isDarkMode, toggleDarkMode }) => {
   return (
     <>
       <section className="home container light-mode" id="home">
@@ -18,17 +18,16 @@ const Home = ({ isDarkMode, toggleDarkMode}) => {
           <DarkModeHome />
         ) : (
           <div className="intro">
-      <Clouds />
-     
-        <img className="home__img" src={Me} alt="Myself" />
-        <h1 className="home__name">Matthew Smith</h1>
-        <span className="home__education">I'm a React Engineer.</span>
-        <HeaderContact />
-        <a href="#contact" className="btn">
-          Hire Me
-        </a>
+            <Clouds />
+
+            <img className="home__img" src={Me} alt="Myself" />
+            <h1 className="home__name">Matthew Smith</h1>
+            <span className="home__education">I'm a React Engineer.</span>
+            <HeaderContact />
+            <a href="#contact" className="btn">
+              Hire Me
+            </a>
             <ScrollDown />
-           
           </div>
         )}
       </section>

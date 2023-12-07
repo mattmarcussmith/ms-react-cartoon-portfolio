@@ -1,7 +1,7 @@
 import React from "react";
 import "./resume.css";
-import Data from "./Data"
-import Card from "./Card"
+import Data from "./Data";
+import Card from "./Card";
 
 const Resume = () => {
   return (
@@ -11,30 +11,32 @@ const Resume = () => {
       <div className="resume__container grid">
         <div className="timeline grid">
           {Data.map((val, id) => {
-            if(val.category === "experience") {
+            if (val.category === "experience") {
               return (
-                <Card 
-                key={id} 
-                icon={val.icon} 
-                year={val.year} 
-                title={val.title} 
-                subTitle={val.subTitle} 
-                desc={val.desc} />
-              )
+                <Card
+                  key={id}
+                  icon={val.icon}
+                  year={val.year}
+                  title={val.title}
+                  subTitle={val.subTitle}
+                  desc={val.desc}
+                />
+              );
             }
           })}
         </div>
         <div className="timeline grid">
           {Data.map((val, index) => {
-            if(val.category === "education") {
+            if (val.category === "education") {
               return (
-                <Card 
-                key={index} 
-                icon={val.icon} 
-                year={val.year} 
-                title={val.title} 
-                subTitle={val.subTitle} 
-                desc={val.desc} />
+                <Card
+                  key={index}
+                  icon={val.icon}
+                  year={val.year}
+                  title={val.title}
+                  subTitle={val.subTitle}
+                  desc={val.desc}
+                />
               );
             }
           })}
