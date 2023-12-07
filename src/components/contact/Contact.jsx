@@ -17,13 +17,14 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("../../../api/emailHandler", {
+      const response = await fetch("../api/emailHandler", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
       });
+      
 
       if (response.ok) {
         console.log("Form submitted successfully");
