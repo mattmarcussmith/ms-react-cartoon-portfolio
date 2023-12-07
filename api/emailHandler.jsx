@@ -1,24 +1,25 @@
 
-
 const nodemailer = require('nodemailer');
 
+
 const transporter = nodemailer.createTransport({
-  host: 'smtp-gmail.com',  
+  host: 'smtp.gmail.com',  
   port: 587,  
   secure: false,  
   auth: {
-    user: 'matt.marcus.smith@gmail.com',  
-    pass: 'Webdeveloper1992!', 
+    user: process.env.EMAIL_USER,  
+    pass: process.env.PASSWORD, 
   },
 });
+
 
 const emailHandler = async (req, res) => {
   try {
     const { name, email, subject, message } = req.body;
 
     const mailOptions = {
-      from: 'matt.marcus.smith@gmail.com',  // Use your email address
-      to: 'matt.marcus.smith@gmail.com',  // Use the recipient's email address
+      from: 'matt.marcus.smith@gmail.com',  
+      to: 'matt.marcus.smith@gmail.com',  
       subject: subject,
       text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
     };
