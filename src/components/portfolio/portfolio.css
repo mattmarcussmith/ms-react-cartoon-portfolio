@@ -1,0 +1,88 @@
+.work__container {
+  grid-template-columns: repeat(1, 1fr);
+  place-items: center;
+}
+.work__card {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  box-shadow: var(-shadow);
+  margin-bottom: 1.25rem;
+}
+
+.work__mask {
+  background-color: #aaaaaa;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  transition: 0.3s;
+  opacity: 0;
+}
+.work__card:hover .work__mask {
+  opacity: 0.9;
+}
+.work__title {
+  color: #fff;
+  font-size: var(--h3-font-size);
+  margin: 0 0 0.98rem;
+  padding: 0 1.25rem;
+  position: absolute;
+  top: 3.75rem;
+  z-index: 99;
+  transform: translateY(30px);
+  transition: 0.3s;
+  opacity: 0;
+}
+.work__desc {
+  color: #fff;
+  font-size: var(--h3-font-size);
+  margin: 0 0 0.98rem;
+  padding: 0 1.25rem;
+  position: absolute;
+  top: 5.75rem;
+  z-index: 99;
+  transform: translateY(30px);
+  transition: 0.3s;
+  opacity: 0;
+}
+.work__button {
+  color: #fff;
+  position: absolute;
+  bottom: 1rem;
+  left: 1.5rem;
+  display: block;
+  background-color: #ffd15c;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  text-align: center;
+  z-index: 999;
+  transition: 0.3s;
+  opacity: 0;
+}
+.work__card:hover .work__button {
+  opacity: 1;
+}
+.work__card:hover .work__title {
+  opacity: 1;
+}
+.work__card:hover .work__desc {
+  opacity: 1;
+}
+
+@media (min-width: 768px) {
+  .work__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .work__card {
+    margin: 1.25rem;
+  }
+
+  .work__img {
+    border-radius: var(--border-radius);
+    width: 400px;
+    height: 300px;
+  }
+}

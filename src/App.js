@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import Sidebar from "./components/sidebar/Sidebar";
 import Home from "./components/home/Home";
@@ -9,13 +9,11 @@ import Portfolio from "./components/portfolio/Portfolio";
 import Contact from "./components/contact/Contact";
 
 const App = () => {
-
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   const toggleDarkMode = () => {
-    setIsDarkMode(prevDarkMode => !prevDarkMode);
+    setIsDarkMode((prevDarkMode) => !prevDarkMode);
   };
-
 
   useEffect(() => {
     if (isDarkMode) {
@@ -29,8 +27,8 @@ const App = () => {
     <>
       <div className="main">
         <Sidebar isDarkMode={isDarkMode} />
-        <Home isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}/>
-        <About isDarkMode={isDarkMode}/>
+        <Home isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
+        <About isDarkMode={isDarkMode} />
         <Services isDarkMode={isDarkMode} />
         <Resume />
         <Portfolio />

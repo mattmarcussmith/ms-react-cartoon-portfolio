@@ -2,12 +2,11 @@ import React from "react";
 import "./sidebar.css";
 import Logo from "../../assets/logo.svg";
 
-const Sidebar = ({isDarkMode}) => {
+const Sidebar = ({ isDarkMode }) => {
   return (
-    <aside className={`aside ${isDarkMode ? 'dark-mode' : ''}`}>
-
+    <aside className={`aside ${isDarkMode ? "dark-mode" : ""}`}>
       <a href="#home" className="nav__logo">
-       <p className="initials">MS</p>
+        <p className="initials">MS</p>
       </a>
       <nav className="nav">
         <div className="nav__menu">
@@ -51,9 +50,7 @@ const Sidebar = ({isDarkMode}) => {
         </div>
       </nav>
       <div className="nav__footer ">
-        <span className="copyright">
-            &copy; 2023 - 2024
-        </span>
+        <span className="copyright">&copy; 2023 - 2024</span>
       </div>
     </aside>
   );
