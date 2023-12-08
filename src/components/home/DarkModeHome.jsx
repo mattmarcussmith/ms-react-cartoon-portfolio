@@ -1,6 +1,6 @@
 import React from "react";
 import "./home.css";
-import Me from "../../assets/avatar-2.gif";
+import Me from "../../assets/avatar-4.png";
 import HeaderContact from "./HeaderContact";
 import ScrollDown from "./ScrollDown";
 import Stars from "./Stars"
@@ -14,8 +14,9 @@ const DarkModeHome = () => {
       <Stars />
       <div className="intro">
         <img className="home__img" src={Me} alt="Myself" />
-        <h1 className="home__name">Matthew Smith</h1>
-        <span className="home__education">I'm a React Engineer.</span>
+        
+        <h1 className="home__name dark-home">Matt Smith</h1>
+        <span className="home__education">React Developer</span>
         <HeaderContact />
         <a href="#contact" className="btn">
           Hire Me
