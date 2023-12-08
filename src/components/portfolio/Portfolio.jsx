@@ -5,7 +5,7 @@ const Portfolio = () => {
   const [items, setItems] = useState(Menu);
 
   return (
-    <section className="work container section" id="work">
+    <section className="work container section" id="portfolio">
       <h2 className="section__title">Latest work </h2>
 
       <div className="work__container grid">

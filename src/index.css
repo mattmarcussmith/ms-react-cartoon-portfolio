@@ -1,7 +1,9 @@
 /*------------------Google Fonts-----------------*/
 
 
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Sue+Ellen+Francisco&display=swap');
+
 
 
 
@@ -12,7 +14,7 @@
   /*------------------Color mode HSL(Hue, Saturation, Lightness)-----------------*/
   --first-color: hsl(353, 100%, 65%);
   --title-color: hsl(244, 24%, 26%);
-  --text-color: hsl(244, 16%, 43%);
+  --text-color: hsl(240, 9%, 20%);
   --body-color:  linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
   
   --container-color: #fff;

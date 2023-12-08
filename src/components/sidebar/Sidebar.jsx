@@ -1,6 +1,13 @@
 import React from "react";
 import "./sidebar.css";
-import Logo from "../../assets/logo.svg";
+import {
+  UilHome,
+  UilHeadSide,
+  UilLaptop,
+  UilFile,
+  UilSuitcase,
+  UilPhone,
+} from "@iconscout/react-unicons";
 
 const Sidebar = ({ isDarkMode }) => {
   return (
@@ -13,37 +20,37 @@ const Sidebar = ({ isDarkMode }) => {
           <ul className="nav__list">
             <li className="nav__item">
               <a href="#home" className="nav__link">
-                <i className="icon-home"></i>
+                <UilHome />
               </a>
             </li>
 
             <li className="nav__item">
               <a href="#about" className="nav__link">
-                <i className="icon-user"></i>
+                <UilHeadSide />
               </a>
             </li>
 
             <li className="nav__item">
               <a href="#services" className="nav__link">
-                <i className="icon-briefcase"></i>
+                <UilLaptop />
               </a>
             </li>
 
             <li className="nav__item">
               <a href="#resume" className="nav__link">
-                <i className="icon-paper-plane"></i>
+                <UilFile />
               </a>
             </li>
 
             <li className="nav__item">
               <a href="#portfolio" className="nav__link">
-                <i className="icon-grid"></i>
+                <UilSuitcase />
               </a>
             </li>
 
             <li className="nav__item">
               <a href="#contact" className="nav__link">
-                <i className="icon-phone"></i>
+                <UilPhone />
               </a>
             </li>
           </ul>

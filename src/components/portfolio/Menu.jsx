@@ -1,5 +1,5 @@
-import Work1 from "../../assets/work-1.png";
-import Work2 from "../../assets/work-2.png";
+import Work1 from "../../assets/work-6.svg";
+import Work2 from "../../assets/work-3.svg";
 
 const Menu = [
   {
