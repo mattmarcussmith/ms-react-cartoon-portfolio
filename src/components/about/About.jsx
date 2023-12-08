@@ -1,6 +1,6 @@
 import React from "react";
 import "./about.css";
-import Myself from "../../assets/avatar-4.gif";
+import Myself from "../../assets/avatar-2.png";
 import CV from "../../assets/matthewsmithresume.pdf";
 import AboutBox from "./AboutBox";
 

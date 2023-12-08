@@ -33,7 +33,7 @@ const Data = [
     icon: "icon-briefcase",
     year: "2022 - 2023",
     title: "Frontend Engineer",
-    subTitle: "Co-op Internship Program",
+    subTitle: "Contract",
     desc: "Designed and crafted newsletters to promote and enhance the company’s brand identity. Engaged in collaborative efforts with team members, employing version control systems like Git and work closely with the design team to ensure the website aligns with the company's brand identity.",
   },
 ];

@@ -1,6 +1,6 @@
 import React from "react";
 
-import Me from "../../assets/avatar-1.gif";
+import Me from "../../assets/avatar-1.png";
 import HeaderContact from "./HeaderContact";
 import ScrollDown from "./ScrollDown";
 import Clouds from "./Clouds";
@@ -21,8 +21,8 @@ const Home = ({ isDarkMode, toggleDarkMode }) => {
             <Clouds />
 
             <img className="home__img" src={Me} alt="Myself" />
-            <h1 className="home__name">Matthew Smith</h1>
-            <span className="home__education">I'm a React Engineer.</span>
+            <h1 className="home__name">Matt Smith</h1>
+            <span className="home__education">React Developer</span>
             <HeaderContact />
             <a href="#contact" className="btn">
               Hire Me
