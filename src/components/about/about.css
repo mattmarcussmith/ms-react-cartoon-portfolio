@@ -35,6 +35,10 @@
   color: #000;
   margin-bottom: 1rem;
 }
+.about__subtitle {
+  font-family: "Sue Ellen Francisco", cursive;
+  font-size: var(--h3-font-size);
+}
 .btn {
   width: 150px;
   padding: 0.6rem;
@@ -98,16 +102,14 @@
   padding-bottom: 1.25rem;
 }
 .icon-fire {
-  font-size: var(--h1-font-size);
   color: var(--first-color);
+  font-size: 3rem;
 }
 .icon-cup {
-  font-size: var(--h1-font-size);
-  color: rgb(0, 0, 0);
+  color: brown;
 }
 .fa-dog {
-  font-size: var(--h1-font-size);
-  color: #985454;
+  color: gray;
 }
 .fa-regular {
   padding-left: 0.5rem;
@@ -159,4 +161,14 @@
 .about.dark-mode .about__container .about__data {
   animation: glow 8s infinite; /* Adjust the duration as needed */
   box-shadow: none; /* Remove the box-shadow on hover to avoid outline */
+}
+@media (min-width: 768px) {
+  .about__subtitle {
+    font-size: var(--h2-font-size);
+  }
+}
+@media (min-width: 1028px) {
+  .about__subtitle {
+    font-size: var(--h1-font-size);
+  }
 }

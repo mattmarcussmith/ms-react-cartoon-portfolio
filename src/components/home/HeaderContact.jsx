@@ -1,5 +1,6 @@
 import React from "react";
-
+import { UilLinkedinAlt } from '@iconscout/react-unicons'
+import { UilCalling } from '@iconscout/react-unicons'
 const HeaderContact = () => {
   const phoneNumber = "5127754243";
 
@@ -13,11 +14,11 @@ const HeaderContact = () => {
         href="https://www.linkedin.com/in/mattmarcussmith/"
         className="home__header-link linkedin "
       >
-        <i className="fa-brands fa-linkedin fa-bounce "></i>
+      <UilLinkedinAlt />
       </a>
 
       <a className="home__header-link phone " onClick={handleIconClick}>
-        <i className="fa-solid fa-phone fa-bounce "></i>
+        <UilCalling />
       </a>
     </div>
   );

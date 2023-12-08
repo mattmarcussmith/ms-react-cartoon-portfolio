@@ -64,7 +64,12 @@
 .home__name {
   font-size: var(--h1-font-size);
   font-weight: var(--font-bold);
+  color: #393939;
   margin-bottom: 0.5rem;
+}
+.home__education {
+  font-family: "Sue Ellen Francisco", cursive;
+  font-size: var(--h1-font-size);
 }
 
 .home__header-contacts {
@@ -75,7 +80,18 @@
   column-gap: 1.5rem;
   margin: 1.5rem 0;
 }
+@keyframes shake {
+  0% { transform: translateY(0); }
+  25% { transform: translateY(-5px) rotate(5deg); }
+  50% { transform: translateY(5px) rotate(-5deg); }
+  75% { transform: translateY(-5px) rotate(-5deg); }
+  100% { transform: translateY(0); }
+}
 
+/* Apply the animation to the element */
+.home__header-link.phone {
+  animation: shake 2s infinite; /* Infinite loop */
+}
 .home__header-link {
   font-size: 1.6rem;
   transition: 0.3s;
@@ -182,49 +198,36 @@
 .cloud1 {
   width: 130px;
   height: 130px;
-  left: 10%;
+  left: -5%;
   top: 1%;
   z-index: 1; /* Adjust the stacking order */
 }
 
 .cloud2 {
   width: 120px;
-  height: 130px;
-  left: 8%;
-  top: 10%;
+  height: 139px;
+  left: -5%;
+  top: -4%;
   z-index: 2; /* Adjust the stacking order */
 }
 
 .cloud3 {
   width: 130px;
-  height: 150px;
-  left: 0%;
-  top: 0%;
-  z-index: 3; /* Adjust the stacking order */
+  height: 120px;
+  left: -5%;
+  top: -10%;
+  z-index: 9; /* Adjust the stacking order */
 }
 .cloud4 {
   width: 140px;
   height: 170px;
-  left: 0%;
-  top: 7%;
-  z-index: 3; /* Adjust the stacking order */
-}
-.cloud5 {
-  width: 140px;
-  height: 170px;
-  left: 0%;
-  top: 22%;
-  z-index: 3; /* Adjust the stacking order */
-}
-.cloud6 {
-  width: 140px;
-  height: 170px;
-  left: 0%;
-  top: 22%;
+  left: 10%;
+  top: -10%;
   z-index: 3; /* Adjust the stacking order */
 }
 
-@media (min-width: 1028px) {
+
+@media (min-width: 768px) {
   .cloud5,
   .cloud6 {
     display: flex;
@@ -248,7 +251,7 @@
   .cloud3 {
     width: 220px;
     height: 200px;
-    left: 0%;
+    left: 10%;
     top: 10%;
     z-index: 3; /* Adjust the stacking order */
   }
@@ -256,7 +259,7 @@
   .cloud4 {
     width: 240px;
     height: 250px;
-    left: 0%;
+    left: 30%;
     top: 5%;
     z-index: 4; /* Adjust the stacking order */
   }
@@ -264,8 +267,8 @@
   .cloud5 {
     width: 150px;
     height: 150px;
-    left: 5%;
-    top: 1%;
+    left: 1%;
+    top: 10%;
     z-index: 1; /* Adjust the stacking order */
   }
 
