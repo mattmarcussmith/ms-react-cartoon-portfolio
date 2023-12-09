@@ -1,16 +1,15 @@
 import sgMail from '@sendgrid/mail';
 
 export default async function handler(req, res) {
-  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Origin', 'https://ms-react-portfolio-dyql4fgp6-matthewmsmith.vercel.app');
+res.setHeader('Access-Control-Allow-Methods', 'POST');
+res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
-  res.setHeader('Access-Control-Allow-Methods', 'POST', 'OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-
-  if (req.method === 'OPTIONS') {
+if (req.method === 'OPTIONS') {
     // Preflight request, respond successfully
     res.status(200).end();
     return;
-  }
+}
   
   try {
     const { senderEmail, subject, text } = req.body;

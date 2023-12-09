@@ -17,7 +17,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-       const response = await fetch("https://ms-react-portfolio-dyql4fgp6-matthewmsmith.vercel.app/api/emailHandler",{
+      const response = await fetch("https://ms-react-portfolio-ps3qg2kww-matthewmsmith.vercel.app/api/emailHandler", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -28,6 +28,7 @@ const Contact = () => {
           text: formData.message,
         }),
       });
+      
 
       if (response.ok) {
         console.log('Form submitted successfully');
