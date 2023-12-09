@@ -16,41 +16,32 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    // Client-side validation
-    if (!formData.name || !formData.email || !formData.subject || !formData.message) {
-      alert("Please fill out all fields.");
-      return;
-    }
-
     try {
-      const response = await fetch("https://matthewmsmithportfolio.com/api/emailHandler", {
-        method: "POST",
+       const response = await fetch("https://ms-react-portfolio-dyql4fgp6-matthewmsmith.vercel.app/api/emailHandler",{
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          to: "matt.marcus.smith@gmail.com",
+          senderEmail: formData.email,
           subject: formData.subject,
           text: formData.message,
         }),
       });
 
       if (response.ok) {
-        console.log("Form submitted successfully");
+        console.log('Form submitted successfully');
         setFormData({
-          name: "",
-          email: "",
-          subject: "",
-          message: "",
+          name: '',
+          email: '',
+          subject: '',
+          message: '',
         });
-        // Provide feedback to the user (e.g., show a success message)
       } else {
-        console.log("Form submission failed");
-        // Provide feedback to the user (e.g., show an error message)
+        console.log('Form submission failed');
       }
     } catch (error) {
-      console.log("Error submitting form", error);
+      console.log('Error submitting form', error);
     }
   };
 
@@ -68,7 +59,6 @@ const Contact = () => {
         <form onSubmit={handleSubmit} className="contact__form">
           <div className="contact__form-group">
             <div className="contact__form-div">
-          
               <input
                 type="text"
                 id="name"
@@ -80,7 +70,6 @@ const Contact = () => {
               />
             </div>
             <div className="contact__form-div">
-             
               <input
                 type="email"
                 id="email"
@@ -92,7 +81,6 @@ const Contact = () => {
               />
             </div>
             <div className="contact__form-div">
-             
               <input
                 type="text"
                 id="subject"
@@ -104,7 +92,6 @@ const Contact = () => {
               />
             </div>
             <div className="contact__form-div contact__form-area">
-              
               <textarea
                 id="message"
                 name="message"
