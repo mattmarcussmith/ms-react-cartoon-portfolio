@@ -2,22 +2,25 @@
 import sgMail from '@sendgrid/mail';
 
 export default async function handler(req, res) {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'POST');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
   if (req.method === 'OPTIONS') {
-  res.setHeader('Access-Control-Allow-Origin', 'https://ms-react-portfolio-dyql4fgp6-matthewmsmith.vercel.app');
-
-    res.setHeader('Access-Control-Allow-Origin', '*');
+    // Preflight request, respond successfully
     res.status(200).end();
     return;
   }
+
+
   try {
-    const { to, subject, text } = req.body;
+    const {to, subject, text } = req.body;
 
     sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
     const msg = {
       to,
-      from: 'matt.marcus.smith@gmail.com', 
+      from: "matt.marcus.smith@gmail.com",
       subject,
       text,
     };
