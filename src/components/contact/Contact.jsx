@@ -22,9 +22,12 @@ const Contact = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          to: "matt.marcus.smith@gmail.com",
+          subject: formData.subject,
+          text: formData.message,
+        }),
       });
-      
 
       if (response.ok) {
         console.log("Form submitted successfully");
@@ -94,7 +97,9 @@ const Contact = () => {
                 placeholder="Write your message"
               ></textarea>
             </div>
-            <button type="submit" className="btn">Send Message</button>
+            <button type="submit" className="btn">
+              Send Message
+            </button>
           </div>
         </form>
       </div>
