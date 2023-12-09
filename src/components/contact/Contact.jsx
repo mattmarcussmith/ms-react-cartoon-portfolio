@@ -17,7 +17,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("https://ms-react-portfolio-ps3qg2kww-matthewmsmith.vercel.app/api/emailHandler", {
+      const response = await fetch("https://matthewmsmithportfolio.com/api/emailHandler", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
