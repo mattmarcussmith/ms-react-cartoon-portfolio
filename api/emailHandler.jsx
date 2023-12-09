@@ -1,7 +1,16 @@
-// api/sendEmail.js
+
 import sgMail from '@sendgrid/mail';
 
 export default async function handler(req, res) {
+  // Set CORS headers to allow requests from a specific origin
+  res.setHeader('Access-Control-Allow-Origin', 'https://matthewmsmithportfolio.com');
+  res.setHeader('Access-Control-Allow-Methods', 'POST');
+
+  if (req.method === 'OPTIONS') {
+    res.status(200).end();
+    return;
+  }
+  
   try {
     const { to, subject, text } = req.body;
 
