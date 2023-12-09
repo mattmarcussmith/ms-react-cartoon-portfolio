@@ -1,48 +1,45 @@
-import React, { useState } from "react";
+
+import React, { useState } from 'react';
 import "./contact.css";
+import axios from "axios";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [subject, setSubject] = useState("");
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((previousData) => ({ ...previousData, [name]: value }));
-  };
+  const serviceId = process.env.REACT_APP_SERVICE_ID;
+  const templateId = process.env.REACT_APP_TEMPLATE_ID;
+  const publicKey = process.env.REACT_APP_PUBLIC_KEY;
+
+    
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      const response = await fetch("https://matthewmsmithportfolio.com/api/emailHandler", {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          senderEmail: formData.email,
-          subject: formData.subject,
-          text: formData.message,
-        }),
-      });
-      
 
-      if (response.ok) {
-        console.log('Form submitted successfully');
-        setFormData({
-          name: '',
-          email: '',
-          subject: '',
-          message: '',
-        });
-      } else {
-        console.log('Form submission failed');
+    const data = {
+      service_id: serviceId,
+      template_id: templateId,
+      user_id: publicKey,
+      template_params: {
+        from_subject: subject,
+        from_name: name,
+        from_email: email,
+        to_name: "Matthew Smith",
+        message: message,
       }
+    };
+  
+    try {
+      const res = await axios.post("https://api.emailjs.com/api/v1.0/email/send", data);
+      console.log(res.data);
+      setName('');
+      setEmail('');
+      setMessage('');
+      setSubject('');
     } catch (error) {
-      console.log('Error submitting form', error);
+      console.log('Error sending email:', error);
     }
   };
 
@@ -64,8 +61,8 @@ const Contact = () => {
                 type="text"
                 id="name"
                 name="name"
-                value={formData.name}
-                onChange={handleChange}
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                 className="contact__form-input"
                 placeholder="Insert your name"
               />
@@ -75,8 +72,8 @@ const Contact = () => {
                 type="email"
                 id="email"
                 name="email"
-                value={formData.email}
-                onChange={handleChange}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 className="contact__form-input"
                 placeholder="Insert your email"
               />
@@ -86,8 +83,8 @@ const Contact = () => {
                 type="text"
                 id="subject"
                 name="subject"
-                value={formData.subject}
-                onChange={handleChange}
+                value={subject}
+                onChange={(e) => setSubject(e.target.value)}
                 className="contact__form-input"
                 placeholder="Insert your subject"
               />
@@ -96,8 +93,8 @@ const Contact = () => {
               <textarea
                 id="message"
                 name="message"
-                value={formData.message}
-                onChange={handleChange}
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
                 className="contact__form-input"
                 placeholder="Write your message"
               ></textarea>
@@ -110,6 +107,5 @@ const Contact = () => {
       </div>
     </section>
   );
-};
-
+  };
 export default Contact;
