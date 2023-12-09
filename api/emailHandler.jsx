@@ -1,38 +1,24 @@
-// emailHandler.js
+const sgMail = require('@sendgrid/mail');
 
-const nodemailer = require("nodemailer");
-
-const transporter = nodemailer.createTransport({
-  host: "smtp.gmail.com",
-  port: 587,
-  secure: false,
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.PASSWORD,
-  },
-});
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 const emailHandler = async (req, res) => {
   try {
-    if (req.method === "POST") {
-      const { name, email, subject, message } = req.body;
+    // ... your existing code
 
-      const mailOptions = {
-        from: process.env.EMAIL_USER,
-        to: process.env.EMAIL_USER, // Update this if you want to send to a different email
-        subject: subject,
-        text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
-      };
+    const mailOptions = {
+      from: 'matt.marcus.smith@gmail.com',  // Use your SendGrid verified email address
+      to: 'matt.marcus.smith@gmail.com',
+      subject: subject,
+      text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+    };
 
-      await transporter.sendMail(mailOptions);
+    await sgMail.send(mailOptions);
 
-      res.status(200).json({ message: "Email sent successfully" });
-    } else {
-      res.status(405).json({ message: "Method Not Allowed" });
-    }
+    res.status(200).json({ message: 'Email sent successfully' });
   } catch (error) {
-    console.error("Error sending email:", error);
-    res.status(500).json({ message: "Internal Server Error" });
+    console.error('Error sending email:', error);
+    res.status(500).json({ message: 'Internal Server Error' });
   }
 };
 
