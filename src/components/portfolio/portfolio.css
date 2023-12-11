@@ -11,7 +11,7 @@
 }
 
 .work__mask {
-  background-color: #aaaaaa;
+  background-color: rgb(150, 148, 141);
   position: absolute;
   left: 0;
   top: 0;
@@ -25,11 +25,11 @@
 }
 .work__title {
   color: #fff;
-  font-size: var(--h3-font-size);
+  font-size: var(--h2-font-size);
   margin: 0 0 0.98rem;
   padding: 0 1.25rem;
   position: absolute;
-  top: 3.75rem;
+  top: .75rem;
   z-index: 99;
   transform: translateY(30px);
   transition: 0.3s;
@@ -41,26 +41,27 @@
   margin: 0 0 0.98rem;
   padding: 0 1.25rem;
   position: absolute;
-  top: 5.75rem;
+  top: 2.75rem;
   z-index: 99;
   transform: translateY(30px);
   transition: 0.3s;
   opacity: 0;
 }
 .work__button {
-  color: #fff;
   position: absolute;
   bottom: 1rem;
   left: 1.5rem;
   display: block;
-  background-color: #ffd15c;
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
+  border-radius: 25px;
   text-align: center;
   z-index: 999;
   transition: 0.3s;
   opacity: 0;
+}
+.work__button:hover {
+  background-color: #262525;
+  color: #fff;
+
 }
 .work__card:hover .work__button {
   opacity: 1;
@@ -71,14 +72,31 @@
 .work__card:hover .work__desc {
   opacity: 1;
 }
+@media (min-width: 400px) {
+  .work__title {
+    font-size: var(--h2-font-size);
+    padding: 0 1.25rem;
+    position: absolute;
+    top: .1rem;
+    z-index: 99;
+    transform: translateY(1px);
+    transition: 0.3s;
+    opacity: 0;
+  }
+  .work__desc {
+    color: #fff;
+    font-size: var(--h3-font-size);
+    top: .8rem;
+    transform: translateY(30px);
+  
+  }
+}
 
 @media (min-width: 768px) {
   .work__container {
     grid-template-columns: repeat(2, 1fr);
   }
-  .work__card {
-    margin: 1.25rem;
-  }
+  
 
   .work__img {
     border-radius: var(--border-radius);

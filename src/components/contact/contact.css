@@ -37,7 +37,7 @@
     border-radius: 1.875rem;
     padding: 0.625rem 1.875rem;
     z-index: 1;
-
+   
 }
 .contact__form-area {
     height: 10.25rem;
@@ -45,6 +45,20 @@
 .contact__form-area textarea {
     resize: none;
 
+}
+.error__message {
+font-size: 1rem;
+padding-top: 3.6rem;
+padding-left: 1.2rem;
+}
+.error__message-green {
+    color: rgb(46, 168, 46);
+    padding-bottom: 1rem;
+   font-size: 1.2rem;
+}
+.error__message-message {
+    font-size: 1rem;
+    padding-top: 10.5rem;  
 }
 @media (min-width: 768px) {
   

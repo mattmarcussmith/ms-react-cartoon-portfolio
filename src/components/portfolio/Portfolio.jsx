@@ -6,7 +6,7 @@ const Portfolio = () => {
 
   return (
     <section className="work container section" id="portfolio">
-      <h2 className="section__title">Latest work </h2>
+      <h2 className="section__title">Latest work</h2>
 
       <div className="work__container grid">
         {items.map((item) => {
@@ -15,8 +15,8 @@ const Portfolio = () => {
             <div className="work__card" key={id}>
               <h3 className="work__title">{title}</h3>
               <span className="work__desc">{desc}</span>
-              <a href={gitHubLink} className="work__button" target="_blank">
-                <i className="icon-link work__button-icon"></i>
+              <a href={gitHubLink} className="btn work__button " target="_blank">
+                GitHub
               </a>
               <div className="work__thumbnail">
                 <img

@@ -349,7 +349,7 @@ input:checked + .slider:before {
 }
 
 .btn {
-  animation: glow 1s infinite;
+  animation: glow 3s infinite;
 }
 
 /*********Dark Mode********/
