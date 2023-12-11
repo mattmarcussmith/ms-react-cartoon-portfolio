@@ -103,13 +103,13 @@
 }
 .icon-fire {
   color: var(--first-color);
-  font-size: 3rem;
+  
 }
 .icon-cup {
-  color: brown;
+  color: rgb(0, 0, 0);
 }
 .fa-dog {
-  color: gray;
+  color: rgb(123, 123, 174);
 }
 .fa-regular {
   padding-left: 0.5rem;
