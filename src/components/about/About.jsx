@@ -1,7 +1,7 @@
 import React from "react";
 import "./about.css";
 import Myself from "../../assets/avatar-2.png";
-import CV from "../../assets/matthewsmithresume.pdf";
+import CV from "../../assets/mattsmithresume.pdf";
 import AboutBox from "./AboutBox";
 
 const About = ({ isDarkMode }) => {
