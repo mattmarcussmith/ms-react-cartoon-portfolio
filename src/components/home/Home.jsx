@@ -23,6 +23,7 @@ const Home = ({ isDarkMode, toggleDarkMode }) => {
             <img className="home__img" src={Me} alt="Myself" />
             <h1 className="home__name">Matt Smith</h1>
             <span className="home__education">React Developer</span>
+            <span className="home__location">Based out of Austin, Texas</span>
             <HeaderContact />
             <a href="#contact" className="btn">
               Hire Me
