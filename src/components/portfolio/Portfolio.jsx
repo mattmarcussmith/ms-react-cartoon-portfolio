@@ -10,14 +10,22 @@ const Portfolio = () => {
 
       <div className="work__container grid">
         {items.map((item) => {
-          const { id, image, title, desc, gitHubLink } = item;
+          const { id, image, title, desc, gitHubLink, LiveDemo } = item;
           return (
             <div className="work__card" key={id}>
               <h3 className="work__title">{title}</h3>
               <span className="work__desc">{desc}</span>
-              <a href={gitHubLink} className="btn work__button " target="_blank">
+             <div className="work__button-container">
+             <a href={gitHubLink} className="btn work__button " target="_blank">
                 GitHub
               </a>
+              <a href={LiveDemo} className="btn work__button" target="_blank">
+                Live Demo
+              </a>
+             </div>
+           
+          
+            
               <div className="work__thumbnail">
                 <img
                   src={image}

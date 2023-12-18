@@ -6,8 +6,9 @@ const Menu = [
     id: 1,
     image: Work1,
     title: "StockShark",
-    desc: "Easily manage your stock investments with this user-friendly web app. Add, track, and analyze stocks in your portfolio. Stay on top of your financial game!",
-    gitHubLink: "https://github.com/mattmarcussmith/ms-react-stockshark",
+    desc: "Easily analyze stocks from varies prominent companies and stay on top of your financial game!",
+    gitHubLink: "https://github.com/mattmarcussmith/ms-react-stock-dashboard.git",
+    LiveDemo: "https://ms-react-stock-dashboard.vercel.app/"
   },
 
 ];
