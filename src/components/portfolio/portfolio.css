@@ -1,9 +1,11 @@
 .work__container {
   grid-template-columns: repeat(1, 1fr);
   place-items: center;
+
 }
 .work__card {
   position: relative;
+ 
   overflow: hidden;
   border-radius: var(--border-radius);
   box-shadow: var(-shadow);
@@ -29,7 +31,7 @@
   
   padding: 0 1.25rem;
   position: absolute;
-  top: 0rem;
+  top: .2rem;
   z-index: 99;
   transform: translateY(3px);
   transition: 0.3s;
@@ -38,7 +40,9 @@
 .work__desc {
   color: #fff;
   font-size: var(--h3-font-size);
-  padding: .5rem;
+  padding-top: 1.9rem;
+  padding-left: .5rem;
+  padding-right: .5rem;
   font-size: .9rem;
   position: absolute;
   top: 1.75rem;

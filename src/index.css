@@ -126,7 +126,9 @@ img {
   position: relative;
   color: #fff
 }
-
+.section__subtitle {
+  color: #fff;
+}
 .section__title::before {
   content: "";
   background: url(./assets/dots-bg.svg);
